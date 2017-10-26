@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Open+Sans');
+body{
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6wllgkzQ8Q4Fj1pcWyiSWFsQmNZExRfxeVBlKnJSMzlmLb0e);
+}
+
+#clear{
+	clear:both;		
+}
+
+#hat1{
+	color:#000000;
+	\\background-color:#E4E7FD;
+	border:1px solid #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	padding:20px;
+	text-align:center;
+	float:left;
+	width:580px;
+	border-radius:20px;
+	margin-top:50px;
+	font-size:25px;
+}
+
+#hat2{
+	color:#000000;
+	\\background-color:#E4E7FD;
+	border:1px solid #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	width:580px;
+	padding:20px;
+	text-align:center;
+	float:right;
+	border-radius:20px;
+	margin-top:50px;
+	font-size:25px;
+}
+
+#text{
+	font-family: 'Open Sans', sans-serif;	
+	font-size:25px;
+	color:#000000;
+	border:1px solid #000000;
+	border-radius:20px;
+	width:130px;
+	height:40px;
+	text-align:center;
+	margin-left:565px;
+	margin-top:200px;
+	
+}
+
+#post{
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	max-width: 860px;
+	height:150px;
+	font-size: 20px;
+	border: 1px solid black;
+	cursor: pointer;
+	trans\ition: 0.3s linear;
+	margin-top:300px;
+	border-radius:20px;
+	
+}
+
+
+\\#post:hov\er{
+	max-width:1200px;
+	
+}
+
+.contact{
+	
+	border:1px solid #000000;
+	font-family: 'Indie Flower' ;	
+	color:#FFFFFF;
+	font-size:25px;
+	
+}
+
+#pictuure{
+	width:65px;	
+	height:65px;	
+	float:left;
+	margin-left:30px;
+}	
+
+.text{
+	font-family: 'Josefin Sans', sans-serif;	
+	margin-left:110px;
+	font-size: 30px;
+	
+}
+
+#t1{
+	margin-top:20px;
+}
+
+.picture2{
+	width:50px;	
+	height:70px;
+	float:left;
+	margin-right:5px;
+
+	
+}
+
+.form{
+	width:140px;	
+	height:60px;
+	padding:10px;
+	border:1px solid #000000;
+	text-align: center;
+	border-radius:20px;
+	float:left;
+	margin:20px;
+	margin-left:30px;
+}
+
+\\Dictionary
+
+.myBtn{
+	width:30px;	
+	height:30px;
+	
+	
+	
+}
+
+#keyboard{
+	border:1px solid #000000;
+	
+	
+}
+
+#a4{
+	width:30px;	
+	height:30px;	
+}
+
+
+
+
+
+
+
+
+
+
+
