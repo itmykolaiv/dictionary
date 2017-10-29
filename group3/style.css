@@ -59,7 +59,7 @@ body{
 	border: 1px solid black;
 	cursor: pointer;
 	trans\ition: 0.3s linear;
-	margin-top:300px;
+	margin-top:200px;
 	border-radius:20px;
 	
 }
@@ -132,13 +132,7 @@ body{
 	
 }
 
-#a5{
-	border-radius:20px;
-	width:300px;	
-	height:30px;
-	margin-left:500px;
-	margin-top:200px;
-}
+
 
 #a6{
 	width:30px;	
@@ -305,13 +299,42 @@ width:30px;
 	height:30px;
 }
 
+#search{
+	float:right;
+	margin-right:255px;
+	margin-top:50px;
+	width:90px;	
+	height:30px;
+}
 
+#search2{
+	border:1px solid #000000;
+	border-radius:20px;
+	width:1000px;	
+	height:150px;
+	margin-top:100px;
+	margin-left:125px;
+}
 
+#a5{
+	border-radius:20px;
+	width:300px;	
+	height:30px;
+	margin-left:350px;
+	margin-top:50px;
+	float:left;
+}
 
-
-
-
-
+#explanation{
+	border:1px solid #000000;
+	border-radius:20px;
+	height:150px;
+	margin-top:50px;
+	text-align: center;
+	padding-top:50px;
+	font-family: 'Josefin Sans', sans-serif;	
+	font-size:20px;
+}
 
 
 
