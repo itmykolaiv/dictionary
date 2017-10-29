@@ -3,6 +3,11 @@ body{
 	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-6wllgkzQ8Q4Fj1pcWyiSWFsQmNZExRfxeVBlKnJSMzlmLb0e);
 }
 
+.clear:after {
+    content: '';
+    clear: both;
+    display: table;
+}
 #clear{
 	clear:both;		
 }
@@ -336,8 +341,39 @@ width:30px;
 	font-size:20px;
 }
 
-
-
+.search2-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 20px
+}
+.search2-wrapper .search-inputs input {
+    border-radius: 20px;
+    width: 300px;
+    height: 30px;
+}
+.search2-wrapper .search-inputs button {
+    width: 90px;
+    height: 30px;
+}
+.search2-wrapper .search-inputs {
+	float: left;
+	margin-right: 10px;
+}
+.search2-wrapper .alphabet {
+	float: left;
+	padding-left: 30px;
+	width: 277px;
+	text-align: center;
+}
+.search2-wrapper .alphabet button {
+	padding: 5px 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	width: 35px;
+}
 
 
 
