@@ -30,3 +30,27 @@ document.addEventListener("DOMContentLoaded", function() {
         
     });
 });
+
+
+//var list = document.querySelector('#list_words');
+
+var text = document.querySelector('.btn-letter');
+
+text.addEventListener('click', function() {
+	 for (var i = 0; i < 10; i++) {
+	 
+	
+	 };
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+});
+	

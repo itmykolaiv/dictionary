@@ -1,0 +1,9 @@
+var list = document.querySelector('#list_words');
+
+var word = document.querySelector('.words');
+var word1 = "word"
+word.addEventListener('click', function() {
+	 for (var i = 10; i < 10; i++) {
+	var text = document.querySelector('#list_words');	 
+	text.innerHTML = 'word1';
+	 }
