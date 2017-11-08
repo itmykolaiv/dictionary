@@ -11,46 +11,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     var search = document.querySelector('.js_search-btn');
-    search.addEventListener('click', function() {
-        var input = document.querySelector('.js_text-input');
-        var word = input.value;
-        send_request(word + '/definitions', '', function(data) {
-            var expl = document.querySelector('#explanation');
-            var word_div = document.createElement('div');
-            word_div.innerHTML = data.word + ':';
-            expl.append(word_div);
-            var div_defs = document.createElement('div');
-            for (var i = 0; i < data.definitions.length; i++) {
-                var div_one_def = document.createElement('div');
-                div_one_def.className = 'word-definition';
-                div_one_def.innerHTML = data.definitions[i].definition;
-                expl.append(div_one_def);
-            }
+    if (search) {
+        search.addEventListener('click', function() {
+            var input = document.querySelector('.js_text-input');
+            build_definitions(input.value);
+            build_examples(input.value);
+            show_item('#explanation');
+            hide_item('#js_list_words');
         });
-        
-    });
-});
+    }
 
-
-//var list = document.querySelector('#list_words');
-
-var text = document.querySelector('.btn-letter');
-
-text.addEventListener('click', function() {
-	 for (var i = 0; i < 10; i++) {
-	 
-	
-	 };
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    var letters = document.querySelectorAll('.js_alphabet button');
+    if (letters) {
+        for (var i = 0; i < letters.length; i++) {
+            letters[i].addEventListener('click', function() {
+                var letter = this.innerText;
+                build_list(letter);
+                hide_item('#explanation');
+                show_item('#js_list_words');
+           });
+        }
+    }
 });
 	

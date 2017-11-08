@@ -153,14 +153,20 @@ body{
 #explanation{
 	border:1px solid #000000;
 	border-radius:20px;
-	height:250px;
 	margin-top:50px;
 	text-align: center;
 	padding-top:50px;
 	font-family: 'Josefin Sans', sans-serif;	
 	font-size:20px;
 }
-
+#explanation .searched-word {
+	color: #0000cd;
+}
+#explanation .examples ol {
+	display: inline-block;
+	text-align: left;
+	margin-top: 0;
+}
 .search2-wrapper {
     width: 750px;
     margin: 0 auto;
@@ -173,7 +179,9 @@ body{
     border-radius: 20px;
     width: 300px;
     height: 30px;
-    margin-top:70px;
+		margin-top:70px;
+		outline: none;
+		padding-left: 10px;
 }
 .search2-wrapper .search-inputs button {
     width: 90px;
@@ -215,6 +223,12 @@ body{
 	
 }
 
+.show {
+	display: block !important;
+}
+.hide {
+	display: none !important;
+}
 
 
 
