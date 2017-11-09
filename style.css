@@ -204,17 +204,21 @@ body{
 	width: 35px;
 }
 
-#list_words{
-	padding: 10px 10px;
-	border:1px solid #000000;
-	border-radius:20px;	
-	margin-left:500px;
-	width: 300px;
-	
-	
-	
+.list-words{
+	-moz-column-gap: 20px;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 20px;
+	column-count: 4;
+	column-gap: 20px;
 }
 
+.list-pagenator {
+	padding: 0 50px;
+	text-align: center;
+}
+.list-pagenator button.active {
+	background: green;
+}
 
 .words{
 	font-size:25px;

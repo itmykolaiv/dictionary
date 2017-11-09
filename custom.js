@@ -1,6 +1,6 @@
 //Send request
 function send_request(command, query, cb) {
-  var baseUrl = 'http://ec2-52-14-195-100.us-east-2.compute.amazonaws.com/dictionary';
+  var baseUrl = 'https://wordsapiv1.p.mashape.com/words';
   var myHeaders = new Headers();
   myHeaders.append("X-Mashape-Key", "zd1IXUWYTnmshVbob13BKiSwWEKdp1PfBb3jsnC4LZHFgUehE1");
 
@@ -46,23 +46,62 @@ function build_examples(word) {
     });
 }
 
-function build_list(letter) {
-    send_request('', 'letterPattern='+encodeURIComponent('^'+letter+'.*$'), function(data) {
-        var list = document.querySelector('#js_list_words');
-        list.innerHTML = '';
-        var ul = document.createElement('ul');
+function build_list(letter, page) {
+    page = page || 1;
+    send_request('', 'page='+page+'&letterPattern='+encodeURIComponent('^'+letter+'.*$'), function(data) {
+        var ul = document.querySelector('.js_list_words_ul');
+        ul.innerHTML = '';
         for (var i = 0; i < data.results.data.length; i++) {
             var li = document.createElement('li');
             li.className = 'words';
             var a = document.createElement('a');
-            a.href = '#';
+            a.href = '#explanation';
             a.className = 'js_word-detail';
             a.setAttribute('data-word', data.results.data[i]);
+            a.innerHTML = data.results.data[i];
             li.append(a);
             ul.append(li);
         }
-        list.append(ul);
+        if (page === 1) {
+            build_pagenator(data.results.total, letter);
+        }
+        var words_links = document.querySelectorAll('.js_word-detail');
+        for (var i = 0; i < words_links.length; i++) {
+            words_links[i].addEventListener('click', function() {
+                var word = this.innerText;
+                build_definitions(word);
+                build_examples(word);
+                show_item('#explanation');
+                hide_item('#js_list_words');
+           });
+        }
     });
+}
+
+function build_pagenator(total, letter) {
+    var page = document.querySelector('.js_pagenator');
+    var countP = parseInt(total/100);
+    for (var i = 1; i <= countP; i++) {
+        var button = document.createElement('button');
+        button.value = i;
+        button.innerHTML = i;
+        button.className = 'js_next_page';
+        page.append(button);
+    }
+    var page_buttons = document.querySelectorAll('.js_next_page');
+    if (page_buttons) {
+        for (var i = 0; i < page_buttons.length; i++) {
+            page_buttons[i].addEventListener('click', function() {
+                var pageN = this.value;
+                build_list(letter, pageN);
+                var active_button = document.querySelector('.js_pagenator button.active');
+                if (active_button) {
+                    active_button.classList.remove('active');
+                }
+                this.className = 'active';
+           });
+        }
+    }
 }
 
 function show_item(item) {
