@@ -80,6 +80,7 @@ function build_list(letter, page) {
 
 function build_pagenator(total, letter) {
     var page = document.querySelector('.js_pagenator');
+    page.innerHTML = '';
     var countP = parseInt(total/100);
     for (var i = 1; i <= countP; i++) {
         var button = document.createElement('button');
