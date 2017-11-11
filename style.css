@@ -229,12 +229,26 @@ body{
 
 .show {
 	display: block !important;
+	font-family: 'Josefin Sans', sans-serif;	
+	border-radius:20px;
+	border:1px solid #000000;
+	 margin-top: 20px
 }
 .hide {
 	display: none !important;
+	font-family: 'Josefin Sans', sans-serif;	
+	
+	
 }
 
+.words a {
+    text-decoration: none;
+   color: #000000;
+}
 
+.list-pagenator button {
+	margin:2.5px;
+} 
 
 
 
