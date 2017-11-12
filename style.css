@@ -48,12 +48,12 @@ body{
 	color:#000000;
 	border:1px solid #000000;
 	border-radius:20px;
-	width:130px;
-	height:40px;
+	width:500px;
+	height:100px;
 	text-align:center;
-	margin-left:565px;
+	margin-left:350px;
 	margin-top:200px;
-	
+	padding:10px;
 }
 
 #post{
@@ -65,8 +65,7 @@ body{
 	font-size: 20px;
 	border: 1px solid black;
 	cursor: pointer;
-	trans\ition: 0.3s linear;
-	margin-top:200px;
+	margin-top:50px;
 	border-radius:20px;
 	
 }
